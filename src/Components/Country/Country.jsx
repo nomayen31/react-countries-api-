@@ -1,13 +1,26 @@
-import './Country.css'
+import React from 'react';
+import './country.css'
+
 const Country = ({country}) => {
+    const {flags,name,timezones,area ,independent, languages
+    } = country;
+    console.log(country)
+    // console.log('gggggggggggggg',languages);
     console.log(country);
-    const {name, flags} = country;
     return (
-        <div className='country'>
-            <h2>Name: {name?.common} </h2>
+        <div className='box'>
+            <h1>Name: {name?.common}</h1>
+            {/* <h2>Mother Language :{languages?.[0]} </h2> */}
+            <h2>Area: {area}</h2>
+            <h2>independent: {independent ? 'True' : 'False' }</h2>
+            {/* <p>languages: {languages}</p> */}
+            <p>TimeZone: {timezones?.[0]}</p>
+
             <img src={flags?.png} alt="" />
+      
+
         </div>
     );
 };
 
-export default Country; 
+export default Country;
