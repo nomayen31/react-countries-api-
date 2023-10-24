@@ -8,3 +8,8 @@
     background-color: brown;
     color: black;
 }
+
+.flag-container{
+    width: 100px;
+    gap: 15px;
+}
